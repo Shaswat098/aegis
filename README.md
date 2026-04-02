@@ -27,7 +27,7 @@ The architecture is modular, scalable, and designed with production best practic
 - Automatic retries with backoff for fault tolerance  
 
 ### Machine Learning-Based Fraud Detection
-- Model trained using Scikit-learn  
+- Model trained using LightBGM  
 - Predicts fraud probability for each transaction  
 - Encoders persisted to ensure training–serving consistency  
 
