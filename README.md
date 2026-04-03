@@ -27,7 +27,11 @@ The architecture is modular, scalable, and designed with production best practic
 - Automatic retries with backoff for fault tolerance  
 
 ### Machine Learning-Based Fraud Detection
+<<<<<<< HEAD
 - Model trained using Scikit-learn  
+=======
+- Model trained using LightBGM  
+>>>>>>> 8c3416af8775d49b4b70876598cbd9f9b4a7ef99
 - Predicts fraud probability for each transaction  
 - Encoders persisted to ensure training–serving consistency  
 
@@ -57,8 +61,11 @@ The architecture is modular, scalable, and designed with production best practic
 - Includes Locust configuration for performance testing  
 
 ---
+<<<<<<< HEAD
 ---
 
+=======
+>>>>>>> 8c3416af8775d49b4b70876598cbd9f9b4a7ef99
 
 ## Architecture
 
@@ -131,6 +138,7 @@ Cache --> ML
 ```
 ---
 ## Project Structure
+<<<<<<< HEAD
 apps///
  ├── transactions/
  ├── users/
@@ -140,10 +148,29 @@ apps///
 
 core/
 config/
+=======
+apps/
+
+├── transactions/
+
+├── users/
+
+├── ml/
+
+├── explanations/
+
+├── risk_engine/
+
+core/
+
+config/
+
+>>>>>>> 8c3416af8775d49b4b70876598cbd9f9b4a7ef99
 docker/
 
 ---
 
+<<<<<<< HEAD
 ## Tech Stack
 
 Backend: Django, Django REST Framework
@@ -155,3 +182,69 @@ Machine Learning: Scikit-learn
 LLM: TinyLlama via Ollama
 Containerization: Docker, Docker Compose
 Load Testing: Locust
+=======
+# Tech Stack
+
+- Backend: Django, Django REST Framework
+- Database: PostgreSQL
+- Async Processing: Celery
+- Message Broker: Redis
+- Cache: Redis
+- Machine Learning: Scikit-learn
+- LLM: TinyLlama via Ollama
+- Containerization: Docker, Docker Compose
+- Load Testing: Locust
+
+---
+
+## Running the Project
+
+### Prerequisites
+- Docker and Docker Compose
+- Python 3.11 (optional for local development)
+- Ollama installed
+
+### Start Services
+```bash
+    docker-compose up --build
+```
+
+### Run Migrations
+``` bash
+    docker-compose run web python manage.py migrate
+```
+
+### Start LLM
+```bash
+    ollama run tinyllama
+```
+### NOTE
+- If inside dev container run normal python and django commands.
+
+## Design Highlights
+- Clean architecture with clear separation of concerns
+- Asynchronous processing for scalability
+- Hybrid explainability system (LLM + rule-based fallback)
+- Fault-tolerant system with retries and caching
+- Production-ready modular design
+
+---
+
+## Feature Improvements
+- Model versioning and A/B testing
+- Feature store integration
+- SHAP-based explainability
+- Kafka-based event streaming
+- Monitoring dashboards with Prometheus and Grafana
+
+---
+
+## Author
+- Kumar Shaswat
+---
+
+## License
+- This project is intended for demonstration purposes.
+
+
+>>>>>>> 8c3416af8775d49b4b70876598cbd9f9b4a7ef99
