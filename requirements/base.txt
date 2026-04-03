@@ -6,6 +6,7 @@ celery
 redis
 django-redis
 requests
+dj_database_url
 
 drf-yasg
 
@@ -19,5 +20,7 @@ python-dotenv
 
 prometheus-client
 django-prometheus
+
+gunicorn
 
 ollama
